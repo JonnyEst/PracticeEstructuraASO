@@ -22,6 +22,8 @@ public class ImplementacionFacadeMapper implements InterfaceFacadeMapper {
 
     @Override
     public NotasSalida MapeoSalida(NotasOut notasOut) {
-        return null;
+        NotasSalida notasSalida = new NotasSalida();
+        notasSalida.setResultado(notasOut.getResultado());
+        return notasSalida;
     }
 }

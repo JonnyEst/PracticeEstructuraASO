@@ -5,6 +5,7 @@ import business.dto.NotasOut;
 import business.impl.ImplementacionBusiness;
 import facade.InterfaceFacade;
 import facade.dto.NotasEntrada;
+import facade.dto.NotasSalida;
 import facade.mapper.impl.ImplementacionFacadeMapper;
 
 public class ImplementacionFacade implements InterfaceFacade {
@@ -15,7 +16,8 @@ public class ImplementacionFacade implements InterfaceFacade {
     public int SaberNota(NotasEntrada notasEntrada) {
 
         NotasInt notasInt = implementacionFacadeMapper.MapeoEntrada(notasEntrada);
-        NotasOut notasOut = implementacionBusiness.saberNota();
-        return 0;
+        NotasOut notasOut = implementacionBusiness.saberNota(notasInt);
+        NotasSalida notasSalida = implementacionFacadeMapper.MapeoSalida(notasOut);
+        return notasSalida.getResultado();
     }
 }
