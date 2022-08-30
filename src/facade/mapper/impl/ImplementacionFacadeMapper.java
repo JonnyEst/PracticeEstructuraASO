@@ -17,7 +17,7 @@ public class ImplementacionFacadeMapper implements InterfaceFacadeMapper {
         notasInt.setNum3(notasEntrada.getNum3());
         notasInt.setNum4(notasEntrada.getNum4());
         notasInt.setNum5(notasEntrada.getNum5());
-        return null;
+        return notasInt;
     }
 
     @Override

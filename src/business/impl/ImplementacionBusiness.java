@@ -11,7 +11,8 @@ public class ImplementacionBusiness implements InterfaceBusiness {
 
     @Override
     public NotasOut saberNota(NotasInt notasInt) {
-        NotasOut notasOut = implementacionDao.resultMaper(notasInt);
+        NotasOut notasOut = new NotasOut();
+        notasOut = implementacionDao.resultMaper(notasInt);
         return notasOut;
     }
 }

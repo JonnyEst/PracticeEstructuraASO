@@ -12,8 +12,9 @@ public class ImplementacionDao implements InterfaceDao {
 
     @Override
     public NotasOut resultMaper(NotasInt notasInt) {
-        int resultado =(notasInt.getNum1()+notasInt.getNum2()+ notasInt.getNum3()+ notasInt.getNum4()+ notasInt.getNum5()/5);
-        NotasOut notasOut = implementsDaoMapper.ResultadoMapper(resultado);
+        NotasOut notasOut = new NotasOut();
+        int resultado =((notasInt.getNum1()+notasInt.getNum2()+ notasInt.getNum3()+ notasInt.getNum4()+ notasInt.getNum5())/5);
+        notasOut = implementsDaoMapper.ResultadoMapper(resultado);
         return notasOut;
     }
 }
